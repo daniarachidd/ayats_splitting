@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:characters/characters.dart';
-import 'package:flutter/services.dart';
-
 import 'firstS.dart';
+import 'secondS.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: testChar(),
+    home: slicing(),
   ));
 }

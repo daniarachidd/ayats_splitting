@@ -1,20 +1,20 @@
 import 'package:alfatia/popUpCard.dart';
-import 'package:alfatia/secondS.dart';
 import 'package:flutter/material.dart';
 import 'quranText.dart';
+import 'seventhS.dart';
 
-class slicing extends StatefulWidget {
-  slicing({Key? key}) : super(key: key);
+class sixthS extends StatefulWidget {
+  sixthS({Key? key}) : super(key: key);
 
-  static var string = quranText[0]['content'].toString();
+  static var string = quranText[5]['content'].toString();
   final word = string.split(' ');
 
   @override
-  State<slicing> createState() => _slicingState();
+  State<sixthS> createState() => sixthSState();
 }
 
-class _slicingState extends State<slicing> {
-  final splitted = slicing.string.split(' ');
+class sixthSState extends State<sixthS> {
+  final splitted = sixthS.string.split(' ');
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,9 @@ class _slicingState extends State<slicing> {
                 Row(
                   children: [
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                       child: Icon(
                         Icons.arrow_left,
                         size: 50,
@@ -56,8 +58,10 @@ class _slicingState extends State<slicing> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => secondS()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => seventhS()));
                       },
                       child: Icon(
                         Icons.arrow_right,
@@ -95,7 +99,7 @@ class _slicingState extends State<slicing> {
                   color: Colors.deepPurple[200],
                   borderRadius: BorderRadius.circular(15)),
               child: Text(
-                slicing.string,
+                sixthS.string,
                 style: TextStyle(fontSize: 25),
               ),
             )),

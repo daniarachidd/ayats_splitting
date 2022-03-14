@@ -1,20 +1,20 @@
 import 'package:alfatia/popUpCard.dart';
-import 'package:alfatia/secondS.dart';
 import 'package:flutter/material.dart';
 import 'quranText.dart';
+import 'thirdS.dart';
 
-class slicing extends StatefulWidget {
-  slicing({Key? key}) : super(key: key);
+class secondS extends StatefulWidget {
+  secondS({Key? key}) : super(key: key);
 
-  static var string = quranText[0]['content'].toString();
+  static var string = quranText[1]['content'].toString();
   final word = string.split(' ');
 
   @override
-  State<slicing> createState() => _slicingState();
+  State<secondS> createState() => secondSState();
 }
 
-class _slicingState extends State<slicing> {
-  final splitted = slicing.string.split(' ');
+class secondSState extends State<secondS> {
+  final splitted = secondS.string.split(' ');
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,9 @@ class _slicingState extends State<slicing> {
                 Row(
                   children: [
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                       child: Icon(
                         Icons.arrow_left,
                         size: 50,
@@ -57,7 +59,7 @@ class _slicingState extends State<slicing> {
                     GestureDetector(
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => secondS()));
+                            MaterialPageRoute(builder: (context) => thirdS()));
                       },
                       child: Icon(
                         Icons.arrow_right,
@@ -95,7 +97,7 @@ class _slicingState extends State<slicing> {
                   color: Colors.deepPurple[200],
                   borderRadius: BorderRadius.circular(15)),
               child: Text(
-                slicing.string,
+                secondS.string,
                 style: TextStyle(fontSize: 25),
               ),
             )),
