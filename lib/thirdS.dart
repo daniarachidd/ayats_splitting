@@ -1,4 +1,4 @@
-import 'package:alfatia/popUpCard.dart';
+import 'package:ayats_splitting/popUpCard.dart';
 import 'package:flutter/material.dart';
 import 'quranText.dart';
 import 'fourthS.dart';

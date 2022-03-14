@@ -1,5 +1,5 @@
-import 'package:alfatia/popUpCard.dart';
-import 'package:alfatia/secondS.dart';
+import 'package:ayats_splitting/popUpCard.dart';
+import 'package:ayats_splitting/secondS.dart';
 import 'package:flutter/material.dart';
 import 'quranText.dart';
 
@@ -19,71 +19,61 @@ class _slicingState extends State<slicing> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [
-        Padding(
-            padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.arrow_back_sharp,
-                      size: 25,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(
-                      width: 25,
-                    ),
-                    Text(
-                      'Tilawah',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.deepPurple[500]),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {},
-                      child: Icon(
-                        Icons.arrow_left,
-                        size: 50,
-                        color: Colors.deepPurple[500],
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => secondS()));
-                      },
-                      child: Icon(
-                        Icons.arrow_right,
-                        size: 50,
-                        color: Colors.deepPurple[500],
-                      ),
-                    ),
-                    Icon(
-                      Icons.repeat,
-                      size: 30,
-                      color: Colors.deepPurple[500],
-                    )
-                  ],
-                ),
-              ],
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          'Tilawah',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.deepPurple[500]),
+        ),
+        leading: Icon(
+          Icons.arrow_back_sharp,
+          size: 25,
+          color: Colors.grey,
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.arrow_left,
+              size: 50,
+              color: Colors.deepPurple[500],
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.arrow_right,
+              size: 50,
+              color: Colors.deepPurple[500],
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.repeat,
+              size: 30,
+              color: Colors.deepPurple[500],
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+            margin: EdgeInsets.fromLTRB(30, 5, 0, 0),
+            alignment: Alignment.topLeft,
+            child: Text(
+              'Al-Fatihah',
+              style:
+                  TextStyle(letterSpacing: 1, fontSize: 20, fontFamily: 'idk'),
             )),
-        Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-          Container(
-              margin: EdgeInsets.fromLTRB(30, 5, 0, 0),
-              alignment: Alignment.topLeft,
-              child: Text(
-                'Al-Fatihah',
-                style: TextStyle(
-                    letterSpacing: 1, fontSize: 20, fontFamily: 'idk'),
-              ))
-        ]),
         Padding(
             padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
             child: Container(
