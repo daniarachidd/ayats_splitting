@@ -45,11 +45,6 @@ class _AyatSplittingState extends State<AyatSplitting> {
   @override
   Widget build(BuildContext context) {
 
-
-
-    for(int i = 0; i < surah_ayats.length; i++) {
-      print(surah_ayats[i]);
-    }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
